@@ -11,7 +11,7 @@ from crawlee.http_crawler import HttpCrawlingContext
 from crawlee.models import BaseRequestData
 from orjson import loads
 
-from afs_crowlee.constants import HEADERS
+from afs_crowlee.constants import BASE_TEMPLATE, HEADERS
 
 from .types import CustomContext
 
@@ -35,7 +35,7 @@ class CustomCrawler(BasicCrawler[CustomContext]):
     ) -> None:
 
         self._build_id = None
-        self._base_url = 'https://www.accommodationforstudents.com/_next/data/{build_id}'
+        self._base_url = BASE_TEMPLATE
 
         kwargs['_context_pipeline'] = (
             ContextPipeline()

@@ -1,3 +1,4 @@
+BASE_TEMPLATE = 'https://www.accommodationforstudents.com/_next/data/{build_id}'
 SEARCH_PATH = '/search-results.json?&geo=false&page={page}&country=gb&location={item}'
 LISTING_PATH = '/property/{item}.json'
 
