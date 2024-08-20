@@ -40,8 +40,8 @@ class CustomCrawler(BasicCrawler[CustomContext]):
         kwargs['_context_pipeline'] = (
             ContextPipeline()
             .compose(self._make_http_request)
-            .compose(self._parse_http_response)
             .compose(self._handle_blocked_request)
+            .compose(self._parse_http_response)
         )
 
         # Initialize curl_impersonate http client using TLS preset and necessary headers
