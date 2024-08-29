@@ -11,7 +11,7 @@ from crawlee.http_crawler import HttpCrawlingContext
 from crawlee.models import BaseRequestData
 from orjson import loads
 
-from afs_crowlee.constants import BASE_TEMPLATE, HEADERS
+from afs_crawlee.constants import BASE_TEMPLATE, HEADERS
 
 from .types import CustomContext
 
