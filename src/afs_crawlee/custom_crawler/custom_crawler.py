@@ -98,7 +98,9 @@ class CustomCrawler(BasicCrawler[CustomContext]):
             self._base_url = self._base_url.format(build_id=self._build_id)
         else:
             # Convert json to python dictionary
-            page_data = loads(context.http_response.read())
+            page_data = context.http_response.read()
+            page_data = page_data.decode('ISO-8859-1').encode('utf-8')
+            page_data = loads(page_data)
 
         async def enqueue_links(
             *, path_template: str, items: list[str], user_data: dict[str, Any] | None = None, label: str | None = None
