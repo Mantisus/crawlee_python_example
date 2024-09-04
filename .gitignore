@@ -23,6 +23,7 @@ dmypy.json
 .ruff_cache
 
 .scrapy
+.results.json
 *.log
 
 storage/
