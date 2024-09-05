@@ -1,7 +1,8 @@
 from crawlee.basic_crawler import Router
 
-from .constants import LISTING_PATH, SEARCH_PATH, TARGET_LOCATIONS
+from .constants import LISTING_PATH, SEARCH_PATH
 from .custom_crawler import CustomContext
+from .input_data import TARGET_LOCATIONS
 
 router = Router[CustomContext]()
 

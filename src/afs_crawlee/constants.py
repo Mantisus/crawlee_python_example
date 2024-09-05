@@ -15,5 +15,3 @@ HEADERS = {
     'Accept-Encoding': 'gzip, deflate, br, zstd',
     'Connection': 'keep-alive',
 }
-
-TARGET_LOCATIONS = ['London', 'Manchester']
