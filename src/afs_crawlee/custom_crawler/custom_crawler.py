@@ -8,7 +8,7 @@ from crawlee.basic_crawler import BasicCrawler, BasicCrawlerOptions, ContextPipe
 from crawlee.errors import SessionError
 from crawlee.http_clients.curl_impersonate import CurlImpersonateHttpClient
 from crawlee.http_crawler import HttpCrawlingContext
-from crawlee.models import BaseRequestData
+from crawlee.models import Request
 from orjson import loads
 
 from afs_crawlee.constants import BASE_TEMPLATE, HEADERS
@@ -106,7 +106,7 @@ class CustomCrawler(BasicCrawler[CustomContext]):
             *, path_template: str, items: list[str], user_data: dict[str, Any] | None = None, label: str | None = None
         ) -> None:
 
-            requests = list[BaseRequestData]()
+            requests = list[Request]()
             user_data = user_data if user_data else {}
 
             for item in items:
@@ -119,7 +119,7 @@ class CustomCrawler(BasicCrawler[CustomContext]):
                     link_user_data['location'] = item
 
                 url = self._base_url + path_template.format(item=item, **user_data)
-                requests.append(BaseRequestData.from_url(url, user_data=link_user_data))
+                requests.append(Request.from_url(url, user_data=link_user_data))
 
             await context.add_requests(requests)
 
