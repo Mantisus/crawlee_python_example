@@ -1,4 +1,4 @@
-from crawlee.basic_crawler import Router
+from crawlee.router import Router
 
 from .constants import LISTING_PATH, SEARCH_PATH
 from .custom_crawler import CustomContext

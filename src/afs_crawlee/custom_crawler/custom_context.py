@@ -3,8 +3,8 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import TYPE_CHECKING
 
+from crawlee._types import BasicCrawlingContext
 from crawlee.http_crawler import HttpCrawlingResult
-from crawlee.types import BasicCrawlingContext
 
 if TYPE_CHECKING:
 
@@ -13,7 +13,7 @@ if TYPE_CHECKING:
 
 @dataclass(frozen=True)
 class CustomContext(HttpCrawlingResult, BasicCrawlingContext):
-    """Crawling context used by BeautifulSoupCrawler."""
+    """Crawling context used by CustomCrawler."""
 
     page_data: dict | None
     # not `EnqueueLinksFunction`` because we are breaking protocol since we are not working with HTML
