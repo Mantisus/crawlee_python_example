@@ -3,7 +3,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import TYPE_CHECKING
 
-from crawlee._types import BasicCrawlingContext
+from crawlee.basic_crawler import BasicCrawlingContext
 from crawlee.http_crawler import HttpCrawlingResult
 
 if TYPE_CHECKING:

@@ -4,8 +4,13 @@ import logging
 from re import search
 from typing import TYPE_CHECKING, Any, Unpack
 
-from crawlee._request import Request
-from crawlee.basic_crawler import BasicCrawler, BasicCrawlerOptions, ContextPipeline
+from crawlee import Request
+from crawlee.basic_crawler import (
+    BasicCrawler,
+    BasicCrawlerOptions,
+    BasicCrawlingContext,
+    ContextPipeline,
+)
 from crawlee.errors import SessionError
 from crawlee.http_clients.curl_impersonate import CurlImpersonateHttpClient
 from crawlee.http_crawler import HttpCrawlingContext
@@ -17,8 +22,6 @@ from .custom_context import CustomContext
 
 if TYPE_CHECKING:
     from collections.abc import AsyncGenerator, Iterable
-
-    from crawlee._types import BasicCrawlingContext
 
 
 class CustomCrawler(BasicCrawler[CustomContext]):
