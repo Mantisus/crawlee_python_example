@@ -1,6 +1,6 @@
 ## About
 
-This project is an example of creating a web crawler using crawlee for python. You can read more details in [this blog](https://github.com/Mantisus/crawlee_python_example)
+This project is an example of creating a web crawler using crawlee for python. You can read more details in [this blog](https://crawlee.dev/blog/scraping-dynamic-websites-using-python)
 
 ## Instalation and Run
 
